@@ -10,14 +10,36 @@
 <body>
     <header class="navbar navbar-fixed-top navbar-inverse">
       <div class="container">
-        <%= link_to "TimeTrip", '#', id: "logo" %>
+        <%= link_to "TimeTrip", '#', class: "navbar-brand" %>
         <nav>
           <ul class="nav navbar-nav navbar-right">
-            <li><%= link_to "Login/Signup", '#' %></li>
+
+            <!-- Login/Signup button -->
+            <button type="button" class="btn login_button btn-lg" data-toggle="modal" data-target="#myModal">
+             Login | Signup
+            </button>
           </ul>
         </nav>
       </div>
     </header>
+
+            <!-- Modal -->
+            <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+              <div class="modal-dialog modal-sm">
+                <div class="modal-content">
+
+                  <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <div align = "center"> Log In </div>
+                    </div>
+                    <a href="#" class="btn" style="width:100%;">
+                     <div class ="fb_button"> <%= link_to image_tag("fb_login.png") %></div>
+                    </a>
+                     
+                </div>
+              </div>
+            </div>
+    
     <div class="container">
       <%= yield %>
     </div>
