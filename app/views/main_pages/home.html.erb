@@ -13,16 +13,20 @@
         <%= link_to "TimeTrip", '#', class: "navbar-brand" %>
         <nav>
           <ul class="nav navbar-nav navbar-right">
-
-            <!-- Login/Signup button -->
-            <button type="button" class="btn login_button btn-lg" data-toggle="modal" data-target="#myModal">
-             Login | Signup
-            </button>
+             <% if current_user %>
+               Welcome <strong><%= current_user.name %></strong>!
+               <%= link_to "Sign out", signout_path, id: "sign_out" %>
+             <% else %>
+          <!-- Login/Signup button -->
+               <button type="button" class="btn login_button btn-lg" data-toggle="modal" data-target="#myModal">
+                 Login | Signup
+               </button>
+             <% end %>  
           </ul>
         </nav>
       </div>
     </header>
-
+            
             <!-- Modal -->
             <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
               <div class="modal-dialog modal-sm">
@@ -33,7 +37,7 @@
                     <div align = "center"> Log In </div>
                     </div>
                     <a href="#" class="btn" style="width:100%;">
-                     <div class ="fb_button"> <%= link_to image_tag("fb_login.png") %></div>
+                     <div class ="fb_button"> <%= link_to image_tag("fb_login.png"), "/auth/facebook" %></div>
                     </a>
                      
                 </div>
