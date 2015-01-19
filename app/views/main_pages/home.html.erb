@@ -8,13 +8,13 @@
    <%= csrf_meta_tags %>
 	</head>
 <body>
-    <header class="navbar navbar-fixed-top navbar-inverse">
+    <header class="navbar navbar-fixed-top">
       <div class="container">
         <%= link_to "TimeTrip", '#', class: "navbar-brand" %>
         <nav>
           <ul class="nav navbar-nav navbar-right">
              <% if current_user %>
-               Welcome <strong><%= current_user.name %></strong>!
+               <!-- Welcome <strong><%= current_user.name %></strong>! -->
                <%= link_to "Sign out", signout_path, id: "sign_out" %>
              <% else %>
           <!-- Login/Signup button -->
@@ -27,11 +27,10 @@
       </div>
     </header>
             
-            <!-- Modal -->
+        <!-- Modal -->
             <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
               <div class="modal-dialog modal-sm">
                 <div class="modal-content">
-
                   <div class="modal-header">
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
                     <div align = "center"> Log In </div>

@@ -1,0 +1,50 @@
+// Place all the styles related to the TimeTrips controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+.leftnav 
+{
+	float: left;
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	background-color: #F7F7F7;
+	border-right: 1px solid #EBEFF1;
+	overflow-y: auto;
+	overflow-x: hidden;
+	color: #32393D;
+	width: 240px;
+	height: 100%;
+	font-size: 10pt;
+	background-size: cover;
+	background-attachment: fixed;
+	padding-top: 50px;
+}
+
+.maincontent 
+{
+	background-color: #F7F7F7;
+	padding-top: 50px;
+	padding-left: 250px;
+	width: 781px;
+
+}
+
+.rightnav {
+float: left;
+position: fixed;
+top: 0px;
+right: 0px;
+background-color: #F7F7F7;
+border-left: 1px solid #EBEFF1;
+overflow-y: auto;
+overflow-x: hidden;
+color: #3C4347;
+width: 280px;
+height: 100%;
+font-size: 10pt;
+background-size: cover;
+background-attachment: fixed;
+padding: 15px;
+}

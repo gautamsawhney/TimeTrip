@@ -12,9 +12,13 @@ Rails.application.routes.draw do
   root 'main_pages#home'
 
   #FB Authentication Paths
-  match 'auth/:provider/callback', to: 'sessions#create', via: [:get, :post]
-  match 'auth/failure', to: redirect('/'), via: [:get, :post]
-  match 'signout', to: 'sessions#destroy', as: 'signout', via: [:get, :post] 
+  match 'auth/:provider/callback', to: 'sessions#create',                 via: [:get, :post]
+  match 'auth/failure',            to:  redirect('/'),                    via: [:get, :post]
+  match 'signout',                 to: 'sessions#destroy', as: 'signout', via: [:get, :post] 
+
+  #User HomePath
+
+   match '/home',   :to => 'time_trips#user_home', :as => 'user_home', via: [:get, :post]
 
   
 
