@@ -143,6 +143,8 @@ GEM
       json (~> 1.7, >= 1.7.7)
       rdoc (~> 4.0)
     slop (3.6.0)
+    socialization (1.1.0)
+      activerecord
     spring (1.2.0)
     sprockets (2.12.3)
       hike (~> 1.2)
@@ -185,6 +187,7 @@ DEPENDENCIES
   rails (= 4.2.0)
   sass-rails (~> 5.0)
   sdoc (~> 0.4.0)
+  socialization
   spring
   sqlite3
   turbolinks

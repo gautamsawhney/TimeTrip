@@ -5,6 +5,7 @@ This README contains the order in which the App was created.
 
 STEPS
 -----
+** VERY IMPORTANT - Use command `rvm --ruby-version use 2.2.0@timetrip`to specify the gemset and ruby version to be used always.   
 
 1) Generated a controller `MainPages` using the command `rails g controller MainPages`.  
 2) Adding the action `home` to `MainPages` controller.  
@@ -19,3 +20,5 @@ STEPS
  d) `http://stackoverflow.com/questions/17371334/how-is-attr-accessible-used-in-rails-4`  
 
  ALL the above are enough to login you in through fb. Learnt 2-3 new things about rails 4.
+
+
